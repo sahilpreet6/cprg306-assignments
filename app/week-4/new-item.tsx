@@ -45,13 +45,8 @@ export default function NewItem() {
 					type="text"
 					value={name}
 					onChange={(event) => setName(event.target.value)}
-					onBlur={() => {
-						setNameTouched(true);
-						if (name.length > 2) {
-							alert("Name looks good.");
-						}
-					}}
-					onFocus={() => setNameTouched(false)}
+					onBlur={() => setNameTouched(true)}
+                    onFocus={() => setNameTouched(false)}
 					required
 					className={`w-full rounded-lg border bg-white px-3 py-2 text-slate-900 shadow-sm outline-none transition focus:ring-2 ${
 						nameTouched && !name
